@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Speedrun Overlay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay">
+        <!-- RECURSOS -->
+        <div class="resources-bar" id="resources-bar"></div>
+
+        <!-- JUEGO / CATEGORIA -->
+        <div class="title-bar" id="game-title">Cargando...</div>
+
+        <!-- CABECERA DEL SPLIT ACTUAL -->
+        <div class="current-header">
+            <img id="current-img" src="" alt="Icon">
+            <div class="current-info">
+                <div id="current-name" class="current-name">Boss</div>
+                <div id="current-pb" class="current-pb">PB: 0:00</div>
+            </div>
+            <div class="main-timer-container">
+                <span id="main-timer" class="main-timer">00:00</span><span id="main-timer-ms" class="main-ms">.00</span>
+            </div>
+        </div>
+
+        <!-- LISTA DE SPLITS -->
+        <div class="splits-list" id="splits-list">
+            <!-- Se inyecta por JS -->
+        </div>
+
+        <!-- FOOTER PACE -->
+        <div class="footer-stats">
+            <div class="stat-row">
+                <span>Current Pace</span>
+                <span id="current-pace">0:00:00</span>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

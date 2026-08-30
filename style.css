@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto+Mono:wght@500;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent; /* Transparente para OBS */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 300px;
+    height: 440px;
+}
+
+.overlay {
+    background: rgba(10, 10, 15, 0.95);
+    border: 2px solid #222;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- RECURSOS --- */
+.resources-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
+}
+
+.resource {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.resource img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resource .count {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: #fff;
+    color: #000;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 1px 4px;
+    border: 1px solid #000;
+}
+
+/* --- TEXTOS CABECERA --- */
+.title-bar {
+    background: #3c1361; /* Púrpura tipo el stream */
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px;
+    border-bottom: 1px solid #000;
+}
+
+.wr-bar {
+    background: #1a1a1a;
+    color: #ffd700; /* Amarillo WR */
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+/* --- SPLIT ACTUAL --- */
+.current-header {
+    display: flex;
+    padding: 8px;
+    background: #111;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+.current-header img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #444;
+    margin-right: 10px;
+}
+
+.current-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.current-name {
+    color: #00e5ff; /* Cyan para que resalte */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.current-pb {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.main-timer-container {
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    color: #00ff66; /* Verde LiveSplit */
+}
+
+.main-timer {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.main-ms {
+    font-size: 16px;
+    color: #00ff66;
+}
+
+/* --- TABLA DE SPLITS CON SCROLL AUTOMÁTICO --- */
+.splits-list {
+    display: flex;
+    flex-direction: column;
+    background: #0d0d0d;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    position: relative; /* Necesario para que el último elemento sea sticky dentro del contenedor */
+}
+
+.splits-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.split-row {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-bottom: 1px solid #1a1a1a;
+    flex-shrink: 0;
+}
+
+.split-row.active {
+    background: #2a1a4a;
+}
+
+.split-row img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.split-name {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.split-row.active .split-name {
+    font-weight: bold;
+}
+
+/* Hacemos que la última fila de la lista (el último split) quede fija abajo */
+.split-row:last-child {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    background-color: #0d0d0d;
+    border-top: 1px solid #333;
+}
+
+.split-row:last-child.active {
+    background-color: #2a1a4a !important;
+}
+
+.split-gap {
+    width: 50px;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    margin-right: 8px;
+}
+
+.gap-green { color: #00ff66; }
+.gap-red { color: #ff3333; }
+.gap-neutral { color: #888; }
+
+.split-time {
+    width: 55px;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+.split-row.future .split-name,
+.split-row.future .split-time {
+    color: #888;
+    font-weight: normal;
+}
+
+/* --- FOOTER --- */
+.footer-stats {
+    padding: 4px 8px;
+    background: #111;
+    border-top: 1px solid #333;
+    font-size: 13px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto Mono', monospace;
+}
