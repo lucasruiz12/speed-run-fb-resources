@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto+Mono:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Roboto+Mono:wght@500;700&display=swap');
 
 html, body {
     margin: 0;
@@ -15,29 +15,107 @@ html, body {
     border: 2px solid #222;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-/* --- RECURSOS --- */
+/* --- RECURSOS Y ANIMACIÓN DE CARTA --- */
 .resources-bar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     width: 100%;
     justify-items: center;
+    padding: 6px 0;
 }
 
 .resource {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
     user-select: none;
+    transition: transform 0.15s ease;
+}
+
+.resource:active {
+    transform: scale(0.9);
+}
+
+/* --- ANIMACIÓN POTENTE DE INVOCACIÓN DE CARTA --- */
+@keyframes invocacionReal {
+    0% { 
+        transform: scale(1) translateY(0); 
+        filter: brightness(1) drop-shadow(0 0 0px rgba(255, 215, 0, 0)); 
+    }
+    30% { 
+        transform: scale(1.25) translateY(-6px) rotate(-4deg); 
+        filter: brightness(2) drop-shadow(0 0 15px rgba(255, 215, 0, 1)); 
+    }
+    60% { 
+        transform: scale(0.95) translateY(2px) rotate(2deg); 
+        filter: brightness(1.3) drop-shadow(0 0 8px rgba(255, 215, 0, 0.7)); 
+    }
+    100% { 
+        transform: scale(1) translateY(0); 
+        filter: brightness(1) drop-shadow(0 0 0px rgba(255, 215, 0, 0)); 
+    }
+}
+
+.resource.invoking {
+    animation: invocacionReal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+}
+
+/* --- ANIMACIÓN PARA LOS SPLITS AL AVANZAR --- */
+@keyframes splitFlash {
+    0% { background-color: #00ff66; color: #000; }
+    100% { background-color: #2a1a4a; color: #fff; }
+}
+
+.split-row.just-split {
+    animation: splitFlash 0.5s ease-out;
+}
+
+/* --- CAPA FLOTANTE DE ANIMACIÓN DE CARTA (Más grande y centrada) --- */
+@keyframes efectoCartaFlotante {
+    0% { 
+        transform: scale(1) translate(0, 0) rotate(0deg); 
+        filter: brightness(1) drop-shadow(0 0 0px rgba(255, 215, 0, 0)); 
+    }
+    35% { 
+        transform: scale(1.6) translate(-15px, -20px) rotate(-8deg); 
+        filter: brightness(2.5) drop-shadow(0 0 20px rgba(255, 215, 0, 1)); 
+    }
+    70% { 
+        transform: scale(0.9) translate(0px, 2px) rotate(4deg); 
+        filter: brightness(1.5) drop-shadow(0 0 10px rgba(255, 215, 0, 0.8)); 
+    }
+    100% { 
+        transform: scale(1) translate(0, 0) rotate(0deg); 
+        filter: brightness(1) drop-shadow(0 0 0px rgba(255, 215, 0, 0)); 
+    }
+}
+
+.floating-anim-layer {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 75px;  /* Un poco más grande que la carta original para que sobresalga */
+    height: 75px;
+    z-index: 999; /* Por encima de todo */
+    pointer-events: none; 
+    background-repeat: no-repeat;
+    background-size: contain; /* Cambiado a contain para que no se deforme */
+    background-position: center;
+    animation: efectoCartaFlotante 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .resource img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 1px solid #444;
 }
 
 .resource .count {
@@ -53,24 +131,17 @@ html, body {
     border: 1px solid #000;
 }
 
-/* --- TEXTOS CABECERA --- */
+/* --- TEXTOS CABECERA (Estilo Yu-Gi-Oh / Egipcio) --- */
 .title-bar {
-    background: #3c1361; /* Púrpura tipo el stream */
+    background: #3c1361; 
     text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 4px;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    padding: 5px;
     border-bottom: 1px solid #000;
-}
-
-.wr-bar {
-    background: #1a1a1a;
-    color: #ffd700; /* Amarillo WR */
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px;
-    text-align: center;
-    border-bottom: 1px solid #333;
+    text-shadow: 1px 1px 2px #000;
 }
 
 /* --- SPLIT ACTUAL --- */
@@ -96,29 +167,31 @@ html, body {
 }
 
 .current-name {
-    color: #00e5ff; /* Cyan para que resalte */
-    font-weight: bold;
-    font-size: 16px;
+    color: #00e5ff; 
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 .current-pb {
     color: #aaa;
-    font-size: 12px;
+    font-size: 11px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .main-timer-container {
     text-align: right;
     font-family: 'Roboto Mono', monospace;
-    color: #00ff66; /* Verde LiveSplit */
+    color: #00ff66; 
 }
 
 .main-timer {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .main-ms {
-    font-size: 16px;
+    font-size: 14px;
     color: #00ff66;
 }
 
@@ -127,22 +200,21 @@ html, body {
     display: flex;
     flex-direction: column;
     background: #0d0d0d;
-    max-height: 200px;
+    flex-grow: 1;
     overflow-y: auto;
     scrollbar-width: none;
-    position: relative; /* Necesario para que el último elemento sea sticky dentro del contenedor */
+    position: relative;
 }
 
 .splits-list::-webkit-scrollbar {
     display: none;
 }
 
-
 .split-row {
     display: flex;
     align-items: center;
     padding: 4px 8px;
-    font-size: 13px;
+    font-size: 12px;
     border-bottom: 1px solid #1a1a1a;
     flex-shrink: 0;
 }
@@ -165,9 +237,9 @@ html, body {
 }
 .split-row.active .split-name {
     font-weight: bold;
+    color: #ffd700;
 }
 
-/* Hacemos que la última fila de la lista (el último split) quede fija abajo */
 .split-row:last-child {
     position: sticky;
     bottom: 0;
@@ -206,10 +278,10 @@ html, body {
 
 /* --- FOOTER --- */
 .footer-stats {
-    padding: 4px 8px;
+    padding: 5px 8px;
     background: #111;
     border-top: 1px solid #333;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .stat-row {

@@ -72,20 +72,21 @@ function handleF1() {
         state.elapsedTime = 0;
         state.splits = [];
         state.currentIndex = 0;
-        if (config.resources) config.resources.forEach(r => r.count = 0);
-
+        if(config.resources) config.resources.forEach(r => r.count = 0);
+        playLocalSound('reset'); 
         updateStaticUI();
         updateUI();
     } else {
         state.isRunning = true;
         state.startTime = Date.now();
+        playLocalSound('start'); // Suena el audio de inicio a full volumen
         loop();
     }
 }
 
 function doSplit() {
     if (!state.isRunning || state.currentIndex >= config.splits.length) return;
-
+    
     const currentTotalTime = getCurrentTime();
     const previousTotal = state.splits.reduce((a, b) => a + b, 0);
     const thisSegmentTime = currentTotalTime - previousTotal;
@@ -93,16 +94,27 @@ function doSplit() {
     state.splits.push(thisSegmentTime);
     state.currentIndex++;
 
-    // Si llegamos al último split o lo superamos, detenemos el timer automáticamente
+    playLocalSound('split'); 
+
     if (state.currentIndex >= config.splits.length) {
         state.isRunning = false;
         state.elapsedTime = currentTotalTime;
         cancelAnimationFrame(state.animationFrame);
-        state.currentIndex = config.splits.length; // Mantiene el índice en el último
+        state.currentIndex = config.splits.length;
     }
-
+    
     updateStaticUI();
     updateUI();
+
+    // Agregar animación visual a la fila activa anterior que acaba de completarse
+    setTimeout(() => {
+        const rows = document.querySelectorAll('.split-row');
+        const targetRow = rows[state.currentIndex - 1];
+        if (targetRow) {
+            targetRow.classList.add('just-split');
+            setTimeout(() => targetRow.classList.remove('just-split'), 500);
+        }
+    }, 10);
 }
 
 function undoSplit() {
@@ -177,6 +189,26 @@ function showCopyNotification() {
     }, 2000);
 }
 
+// --- CONFIGURACIÓN DE AUDIOS LOCALES ---
+const sounds = {
+    summon: new Audio('sounds/summon.mp3'),
+    split: new Audio('sounds/split.mp3'),
+    start: new Audio('sounds/start.mp3'),
+    reset: new Audio('sounds/reset.mp3')
+};
+
+// Ajustar volúmenes opcionalmente (de 0.0 a 1.0)
+Object.values(sounds).forEach(audio => audio.volume = 0.5);
+
+function playLocalSound(name) {
+    if (sounds[name]) {
+        sounds[name].currentTime = 0;
+        sounds[name].play().catch(err => {
+            console.log(`Audio local '${name}' no encontrado o bloqueado aún en OBS.`, err);
+        });
+    }
+}
+
 function fallbackDownload(jsonString) {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(jsonString);
     const a = document.createElement('a');
@@ -190,25 +222,41 @@ function fallbackDownload(jsonString) {
 function renderResources() {
     const container = document.getElementById('resources-bar');
     container.innerHTML = '';
-
-    if (!config.resources) return;
+    
+    if(!config.resources) return;
 
     config.resources.forEach((res) => {
         const el = document.createElement('div');
         el.className = 'resource';
         el.innerHTML = `<img src="${res.image}"><span class="count">${res.count}</span>`;
-
+        
         el.addEventListener('click', () => {
             res.count++;
+            playLocalSound('summon'); 
+
+            // --- MAGIA CON DIV FLOTANTE TRANSPARENTE ---
+            // Creamos un div flotante idéntico a la carta que salta por encima de todo
+            const floatLayer = document.createElement('div');
+            floatLayer.className = 'floating-anim-layer';
+            floatLayer.style.backgroundImage = `url('${res.image}')`;
+            
+            // Lo metemos dentro de la celda de la carta para que nazca exactamente ahí
+            el.appendChild(floatLayer);
+
+            // Lo borramos automáticamente cuando termina la animación (0.4 segundos)
+            setTimeout(() => {
+                floatLayer.remove();
+            }, 400);
+
             renderResources();
         });
-
+        
         el.addEventListener('contextmenu', (e) => {
             e.preventDefault();
             if (res.count > 0) res.count--;
             renderResources();
         });
-
+        
         container.appendChild(el);
     });
 }
