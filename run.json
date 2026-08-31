@@ -174,13 +174,18 @@
       "pbSegment": "00:00:00"
     },
     {
-      "name": "Meadow Mage",
-      "image": "https://static.wikia.nocookie.net/yugioh/images/5/5a/Meadow_Mage.png/revision/latest?cb=20080627231748",
+      "name": "Desert Mage",
+      "image": "https://static.wikia.nocookie.net/yugioh/images/a/a6/Desert_Mage.png/revision/latest?cb=20080629190507",
       "pbSegment": "00:00:00"
     },
     {
-      "name": "Kepura",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBPs8YM0_TwmaQzRd_65dapyi9QQvitzAKfEyYrooOFQ&s=10",
+      "name": "Martis",
+      "image": "https://static.wikia.nocookie.net/yugioh/images/6/60/High_Mage_Martis.png/revision/latest?cb=20080629190639",
+      "pbSegment": "00:00:00"
+    },
+    {
+      "name": "Lab Mage",
+      "image": "https://static.wikia.nocookie.net/yugioh/images/9/95/Labyrinth_Mage.png/revision/latest/thumbnail/width/360/height/360?cb=20080627233902",
       "pbSegment": "00:00:00"
     },
     {
@@ -194,16 +199,6 @@
       "pbSegment": "00:00:00"
     },
     {
-      "name": "Desert Mage",
-      "image": "https://static.wikia.nocookie.net/yugioh/images/a/a6/Desert_Mage.png/revision/latest?cb=20080629190507",
-      "pbSegment": "00:00:00"
-    },
-    {
-      "name": "Martis",
-      "image": "https://static.wikia.nocookie.net/yugioh/images/6/60/High_Mage_Martis.png/revision/latest?cb=20080629190639",
-      "pbSegment": "00:00:00"
-    },
-    {
       "name": "Forest Mage",
       "image": "https://static.wikia.nocookie.net/yugioh/images/5/5a/Meadow_Mage.png/revision/latest/thumbnail/width/360/height/360?cb=20080627231748",
       "pbSegment": "00:00:00"
@@ -214,13 +209,18 @@
       "pbSegment": "00:00:00"
     },
     {
-      "name": "MBD",
-      "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/c/c0/Foto_drag%C3%B3n_meteoro_negro.jpg/revision/latest?cb=20120305003724&path-prefix=es",
+      "name": "Meadow Mage",
+      "image": "https://static.wikia.nocookie.net/yugioh/images/5/5a/Meadow_Mage.png/revision/latest?cb=20080627231748",
       "pbSegment": "00:00:00"
     },
     {
-      "name": "Lab Mage",
-      "image": "https://static.wikia.nocookie.net/yugioh/images/9/95/Labyrinth_Mage.png/revision/latest/thumbnail/width/360/height/360?cb=20080627233902",
+      "name": "Kepura",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBPs8YM0_TwmaQzRd_65dapyi9QQvitzAKfEyYrooOFQ&s=10",
+      "pbSegment": "00:00:00"
+    },
+    {
+      "name": "MBD",
+      "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/c/c0/Foto_drag%C3%B3n_meteoro_negro.jpg/revision/latest?cb=20120305003724&path-prefix=es",
       "pbSegment": "00:00:00"
     },
     {

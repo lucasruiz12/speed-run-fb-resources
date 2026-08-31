@@ -126,7 +126,6 @@ function formatTimeForExport(ms) {
     let m = Math.floor((totalSeconds % 3600) / 60);
     let s = totalSeconds % 60;
     
-    // Si querés que conserve el formato con milisegundos o solo segundos:
     let hStr = h.toString().padStart(2, '0');
     let mStr = m.toString().padStart(2, '0');
     let sStr = s.toString().padStart(2, '0');
@@ -134,23 +133,52 @@ function formatTimeForExport(ms) {
     return `${hStr}:${mStr}:${sStr}`;
 }
 
-function saveConfig() {
+async function saveConfig() {
     if (!config) return;
     let exportConfig = JSON.parse(JSON.stringify(config));
 
-    // Recorremos los splits para actualizar su pbSegment con los tiempos reales logrados
+    // Actualizamos los splits con los tiempos reales logrados en la run
     exportConfig.splits.forEach((s, index) => {
-        // Si el split se completó en esta run, usamos ese tiempo real
         if (index < state.splits.length) {
             s.pbSegment = formatTimeForExport(state.splits[index]);
-        } else {
-            // Si el split quedó sin hacer, podemos dejar su pbSegment original o en ceros
-            // (acá mantiene el original que ya tenía)
         }
         delete s.pbSegmentMs;
     });
 
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportConfig, null, 2));
+    const jsonString = JSON.stringify(exportConfig, null, 2);
+
+    try {
+        // Intentamos copiar al portapapeles (funciona perfecto en OBS y navegadores modernos)
+        await navigator.clipboard.writeText(jsonString);
+        console.log("¡JSON copiado al portapapeles con éxito!");
+        
+        // Opcional: podés mostrar un aviso visual rápido en pantalla si querés
+        showCopyNotification();
+    } catch (err) {
+        console.error("Error al copiar al portapapeles:", err);
+        // Plan B por si falla el portapapeles: intentamos el método de descarga clásico
+        fallbackDownload(jsonString);
+    }
+}
+
+// Función auxiliar por si querés un pequeño aviso visual en el overlay de que se copió
+function showCopyNotification() {
+    let notif = document.getElementById('copy-notification');
+    if (!notif) {
+        notif = document.createElement('div');
+        notif.id = 'copy-notification';
+        notif.style.cssText = "position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background: #2ecc71; color: #fff; padding: 5px 15px; border-radius: 4px; font-size: 12px; font-weight: bold; z-index: 9999; pointer-events: none; transition: opacity 0.5s;";
+        document.body.appendChild(notif);
+    }
+    notif.innerText = "¡JSON copiado al portapapeles!";
+    notif.style.opacity = "1";
+    setTimeout(() => {
+        notif.style.opacity = "0";
+    }, 2000);
+}
+
+function fallbackDownload(jsonString) {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(jsonString);
     const a = document.createElement('a');
     a.setAttribute("href", dataStr);
     a.setAttribute("download", "run_updated.json");
