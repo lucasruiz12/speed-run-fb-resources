@@ -46,212 +46,212 @@
     {
       "name": "DMK",
       "image": "https://static.wikia.nocookie.net/yugioh/images/c/c6/Duel_Master_K.png/revision/latest?cb=20080625183829",
-      "pbSegment": "03:00:00"
+      "pbSegment": "00:03:35"
     },
     {
       "name": "Simon Muran",
       "image": "https://static.wikia.nocookie.net/yugioh/images/d/d4/FMR_Simon.png/revision/latest?cb=20080625183829",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:45"
     },
     {
       "name": "Tea",
       "image": "https://static.wikia.nocookie.net/yugioh/images/d/df/Teana.jpg/revision/latest?cb=20070706144035",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:17"
     },
     {
       "name": "Villager 1",
       "image": "https://static.wikia.nocookie.net/yugioh/images/a/a0/Villager1-FMR.png/revision/latest?cb=20080628000542",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:06"
     },
     {
       "name": "Villager 2",
       "image": "https://static.wikia.nocookie.net/yugioh/images/0/01/Villager2-FMR.png/revision/latest/scale-to-width-down/268?cb=20080628001246",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:34"
     },
     {
       "name": "Villager 3",
       "image": "https://static.wikia.nocookie.net/yugioh/images/f/ff/Villager_3.png/revision/latest?cb=20080703213933",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:03"
     },
     {
       "name": "Joey I",
       "image": "https://static.wikia.nocookie.net/yugioh/images/f/f5/Jono.png/revision/latest?cb=20080704111406",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:09"
     },
     {
       "name": "Seto I",
       "image": "https://static.wikia.nocookie.net/yugioh/images/1/19/Evil_Seto.png/revision/latest/scale-to-width-down/268?cb=20080629194752",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:01:59"
     },
     {
       "name": "Heishin",
       "image": "https://static.wikia.nocookie.net/yugioh/images/5/54/Heishin.png/revision/latest?cb=20080625175905",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:41"
     },
     {
       "name": "Rex",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHDXlaUNZ3t4I5nwEIK1rNvEizADdaR80cvyvRZgfhEk6u8QsWPYnbhyMd&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:07"
     },
     {
       "name": "Weevil",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeMpiqt7jydf12FG5aoX_gznOsyYAvRQYOEXmJveV7Vg&s",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:35"
     },
     {
       "name": "Mai",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5Qkf7tHF14dCIE7LQDa2Rx9bdXtUE7O1ovWlYk8Ze0rKjYESMfsknPk&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:29"
     },
     {
       "name": "Keith",
       "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/c/c2/Keith_howard.jpg/revision/latest/thumbnail/width/360/height/360?cb=20111120153516&path-prefix=es",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:45"
     },
     {
       "name": "Shadi",
       "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/c/cd/Shadi_en_Forbidden_Memories.JPG/revision/latest?cb=20130601063443&path-prefix=es",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:21"
     },
     {
       "name": "Bakura",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStYp4uEOD2kmhsITQB-dvVXYIisZ_MmDiJNTm_UfhHqw&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:12"
     },
     {
       "name": "Pegasus",
       "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/2/2b/Pegasus_wins.JPG/revision/latest?cb=20130601060223&path-prefix=es",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:25"
     },
     {
       "name": "Ishizu",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9-baIr_cnXZqyFP5yyEB5184WG_BLLtud_JGFCWKsow&s=10",
-      "pbSegment": "00:00:00"
-    },
-    {
-      "name": "Megamorph",
-      "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/d/d4/Foto_megamorfo.jpg/revision/latest?cb=20111106202706&path-prefix=es",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:56"
     },
     {
       "name": "Kaiba",
       "image": "https://i.ytimg.com/vi/DyDYpUInRoQ/mqdefault.jpg",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:28"
     },
     {
       "name": "Mage Soldier",
       "image": "https://static.wikia.nocookie.net/yugioh/images/4/45/Mage_Soldier.png/revision/latest/thumbnail/width/360/height/360?cb=20080629194725",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:38"
     },
     {
       "name": "Joey II",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwoiHFDL0RFd_pdCQTBwGmqsmZSmzCZ8jTag3eWYvUBmp0nREint-NZLU&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:44"
     },
     {
       "name": "Tea II",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2UFUWc4KOx8gUicwkN64lYIZwFTT5zp7P6c00RjLSHw&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:23"
+    },
+    {
+      "name": "Megamorph",
+      "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/d/d4/Foto_megamorfo.jpg/revision/latest?cb=20111106202706&path-prefix=es",
+      "pbSegment": "00:07:32"
     },
     {
       "name": "Ocean Mage",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD86G5oPUeEV_NyKLnd9EVGPDR8fqUyHJeNggKuM_SFg&s",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:06:19"
     },
     {
       "name": "Secmenton",
       "image": "https://static.wikia.nocookie.net/yugioh/images/2/26/High_Mage_Secmeton.png/revision/latest?cb=20080629194918",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:01:42"
     },
     {
       "name": "Mountain Mage",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_aFxzh6aICjG0O4EvgVzzdziDlM61xn0fJArotkEgA&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:01:56"
     },
     {
       "name": "Atenza",
       "image": "https://static.wikia.nocookie.net/yugioh/images/0/0b/High_Mage_Atenza.png/revision/latest/thumbnail/width/360/height/360?cb=20080627233327",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:26"
     },
     {
       "name": "Desert Mage",
       "image": "https://static.wikia.nocookie.net/yugioh/images/a/a6/Desert_Mage.png/revision/latest?cb=20080629190507",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:30"
     },
     {
       "name": "Martis",
       "image": "https://static.wikia.nocookie.net/yugioh/images/6/60/High_Mage_Martis.png/revision/latest?cb=20080629190639",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:01"
     },
     {
       "name": "Lab Mage",
       "image": "https://static.wikia.nocookie.net/yugioh/images/9/95/Labyrinth_Mage.png/revision/latest/thumbnail/width/360/height/360?cb=20080627233902",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:14"
     },
     {
       "name": "Seto II",
       "image": "https://i.ytimg.com/vi/IfqAbj1fudo/maxresdefault.jpg",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:21"
     },
     {
       "name": "Win Heishin I",
       "image": "https://static.wikia.nocookie.net/yugioh-forbidden-memories/images/5/54/Heishin.png/revision/latest/thumbnail/width/360/height/360?cb=20180622070023",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:06:15"
     },
     {
       "name": "Forest Mage",
       "image": "https://static.wikia.nocookie.net/yugioh/images/5/5a/Meadow_Mage.png/revision/latest/thumbnail/width/360/height/360?cb=20080627231748",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:44"
     },
     {
       "name": "Anubisius",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlzBudeOpyx3kODM6oc-dB5r6XqJqF_0wwXAoI5ah5ZA&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:08"
     },
     {
       "name": "Meadow Mage",
       "image": "https://static.wikia.nocookie.net/yugioh/images/5/5a/Meadow_Mage.png/revision/latest?cb=20080627231748",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:05"
     },
     {
       "name": "Kepura",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBPs8YM0_TwmaQzRd_65dapyi9QQvitzAKfEyYrooOFQ&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:47"
     },
     {
       "name": "MBD",
       "image": "https://static.wikia.nocookie.net/yugiohenespanol/images/c/c0/Foto_drag%C3%B3n_meteoro_negro.jpg/revision/latest?cb=20120305003724&path-prefix=es",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:06:07"
     },
     {
       "name": "Sebek",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh-Z_d5KDJnuSiOtyWHXx7y982CsfndvN3rByIkMxBqA&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:11:53"
     },
     {
       "name": "Neku",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8loIBR-rMdnVnLrsPe5Fvfv0qIMR-jUjHtI1IuTO6bA&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:11"
     },
     {
       "name": "Heishin II",
       "image": "https://static.wikia.nocookie.net/yugioh-forbidden-memories/images/5/54/Heishin.png/revision/latest/thumbnail/width/360/height/360?cb=20180622070023",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:01:32"
     },
     {
       "name": "Seto III",
       "image": "https://i.ytimg.com/vi/IfqAbj1fudo/maxresdefault.jpg",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:02:28"
     },
     {
       "name": "Darknite",
       "image": "https://static.wikia.nocookie.net/villains/images/0/0f/Nitemare_Darknite_%28Forbidden_Memories2%29.jpg/revision/latest?cb=20151027074029",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:01"
     },
     {
-      "name": "Nitemare (PB)",
+      "name": "Nitemare (PB) - 19/09/26",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVY33fb3zEUouCXmGDoRy__zeyvnVQ1iw_7l3mAy6AA&s=10",
-      "pbSegment": "00:00:00"
+      "pbSegment": "00:03:15"
     }
   ]
 }
